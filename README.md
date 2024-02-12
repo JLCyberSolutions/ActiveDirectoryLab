@@ -3,7 +3,7 @@
  ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
 
 <h2>Description</h2>
-The purpose of this project is to create a home lab version of an Active Directory server that would emulate what you might find in a corporate environment. Virtualbox was utilized to create two VMs which would host two separate environments. The first VM was configured to have two separate network adapters (internal and external), and a Windows Server 2019 iso file was applied to it, allowing this VM to serve as the Active Directory Server and Domain Controller.
+The purpose of this project is to create a home lab version of an Active Directory server that emulates what you might find in a corporate environment. Virtualbox was utilized to create two VMs which host two separate environments. The first VM was configured to serve as the domain controller by applying a Windows Server 2019 iso to it, installing Active Directory, and creating mydomain.com. Remote Access Services and NAT were configured on the domain controller to allow users on the internal portion of the network a means to reach the internet. DHCP was also configured on the domain controller with a scope of 172.16.0.100-200 to automatically lease users of mydomain.com an IP address within that range. A powershell script focused on automatic user creation was ran on the domain controller and over 1000 randomly named accounts were created and added to the user list of mydomain.com. Finally, a second VM was created, had a Windows 10 iso applied to it, and was renamed CLIENT1. CLIENT1 was joined to mydomain.com allowing any of the various user accounts to login with their respective credentials, receive an IP address, and begin using the workstation as needed. The various user accounts were additionally split into several security groups such as Accounting, Human Resources, IT, and Termed, with each group having their own set of permissions and access within mydomain.com.
 <br />
 
 
@@ -32,19 +32,47 @@ DHCP enabled but still needs configuring: <br/>
 <img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Confirm your selection:  <br/>
+DHCP configured with scope 172.16.0.100-200:  <br/>
 <img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
+The powershell user creation script to create 1k+ accounts:  <br/>
 <img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Sanitization complete:  <br/>
+Automatic account creation in action:  <br/>
 <img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
+1051 total users after running script:  <br/>
+<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+CLIENT1 created, joined to mydomain.com and automatically receiving IP address, subnet mask, default gateway, etc:  <br/>
+<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+CLIENT1 showing on the domain controller as a result of being joined to mydomain.com:  <br/>
+<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+CSwisher, the random user account I chose to login to CLIENT1 with and test DHCP:  <br/>
+<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+CSwisher logging in on CLIENT1:  <br/>
+<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+CSwisher logged in on CLIENT1, command line shows CSwisher as a member of mydomain.com:  <br/>
+<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Back on the domain controller with DHCP showing an IP address leased to CLIENT1 following CSwisher's login:  <br/>
+<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Active Directory control panel featuring the addition of the various security groups:  <br/>
 <img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
