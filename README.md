@@ -20,15 +20,15 @@ The purpose of this project is to create a home lab version of an Active Directo
 <h2>Project walk-through:</h2>
 
 <p align="center">
-This is an overview of the full, configured network. The first VM, the domain controller (denoted DC) houses Active Directory via the application of a Windows Server 2019 iso. This VM is configured to have two network adapters (1 internal, 1 external). The external network automatically receives IP addressing from my home network, while the internal network has IP addressing manually assigned to it.   <br/>
+This is a basic diagram of the full, configured network. The first VM, the domain controller (denoted DC) houses Active Directory and our domain (mydomain.com) via the installation of a Windows Server 2019 iso. This VM is configured to have two network adapters; one external adapter that connects to the internet, and one internal adapter that clients from inside the private network will connect to. The external network automatically receives IP addressing from my home router, while the internal network has IP addressing manually assigned to it. NAT and routing are configured on the domain controller allowing clients from the internal network to reach the internet through the domain controller. DHCP is configured with the info listed below so that our client machine (denoted CLIENT1, and using Windows 10) can automatically receive an IP address. CLIENT1 is joined to mydomain.com allowing any respective members to login and use this machine with their respective credentials. <br/>
 <img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Select the disk:  <br/>
+Viewing the dashboard of AD server manager and all configured services on the domain controller:  <br/>
 <img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Enter the number of passes: <br/>
+DHCP enabled but still needs configuring: <br/>
 <img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
