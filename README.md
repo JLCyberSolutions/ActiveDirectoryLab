@@ -20,7 +20,7 @@ The purpose of this project is to create a home lab version of an Active Directo
 <h2>Project walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
+This is an overview of the full, configured network. The first VM, the domain controller (denoted DC) houses Active Directory via the application of a Windows Server 2019 iso. This VM is configured to have two network adapters (1 internal, 1 external). The external network automatically receives IP addressing from my home network, while the internal network has IP addressing manually assigned to it.   <br/>
 <img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
