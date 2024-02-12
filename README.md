@@ -3,7 +3,7 @@
  ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
 
 <h2>Description</h2>
-Project consists of...
+The purpose of this project is to create a home lab version of an Active Directory server that would emulate what you might find in a corporate environment. Virtualbox was utilized to create two separate environment across two different VMs. A Windows Server 2019 iso file was applied to the first VM, allowing me to begin configuring the Active Directory Server.
 <br />
 
 
@@ -17,7 +17,7 @@ Project consists of...
 - <b>Windows 10</b>
 - <b>Windows Server 2019</b>
 
-<h2>Program walk-through:</h2>
+<h2>Project walk-through:</h2>
 
 <p align="center">
 Launch the utility: <br/>
