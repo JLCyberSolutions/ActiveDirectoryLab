@@ -3,14 +3,13 @@
  ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
 
 <h2>Description</h2>
-The purpose of this project is to create a home lab version of an Active Directory server that would emulate what you might find in a corporate environment. Virtualbox was utilized to create two separate environment across two different VMs. A Windows Server 2019 iso file was applied to the first VM, allowing me to begin configuring the Active Directory Server.
+The purpose of this project is to create a home lab version of an Active Directory server that would emulate what you might find in a corporate environment. Virtualbox was utilized to create two separate environments across two different VMs. A Windows Server 2019 iso file was applied to the first VM, allowing me to begin configuring the Active Directory Server.
 <br />
 
 
 <h2>Languages and Utilities Used</h2>
 
 - <b>PowerShell</b> 
-- <b>Diskpart</b>
 
 <h2>Environments Used </h2>
 
