@@ -22,85 +22,85 @@ The purpose of this project is to create a home lab version of an Active Directo
 
 <p align="center">
 Pictured below is a basic diagram of the full, configured network. The first VM, the domain controller (denoted DC) houses Active Directory and our domain (mydomain.com) via the installation of a Windows Server 2019 iso. This VM is configured to have two network adapters; one external adapter that connects to the internet, and one internal adapter that clients from inside the private network will connect to. The external network automatically receives IP addressing from my home router, while the internal network has IP addressing manually assigned to it. NAT and routing are configured on the domain controller allowing clients from the internal network to reach the internet through the domain controller. DHCP is configured with the info listed below so that our client machine (denoted CLIENT1, and using Windows 10) can automatically receive an IP address. CLIENT1 is joined to mydomain.com allowing any respective members to login and use this machine with their respective credentials. <br/>
-<img src="https://i.imgur.com/1zUO3Ox.png" height="80%" width="80%" alt="AD Home Lab"/>
+<img src="https://i.imgur.com/2BNq92C.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
 
 <p align="center">
 Viewing the dashboard of AD server manager and all configured services on the domain controller:  <br/>
-<img src="https://i.imgur.com/EeKJchH.png" height="80%" width="80%" alt="AD Home Lab"/>
+<img src="https://i.imgur.com/G095HKu.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
 
 <p align="center">
 DHCP enabled but still needs configuring: <br/>
-<img src="https://i.imgur.com/ZrgtsjY.png" height="80%" width="80%" alt="AD Home Lab"/>
+<img src="https://i.imgur.com/kt0HOxz.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
 
 <p align="center">
 DHCP configured with scope 172.16.0.100-200:  <br/>
-<img src="https://i.imgur.com/rUEgAen.png" height="80%" width="80%" alt="AD Home Lab"/>
+<img src="https://i.imgur.com/yv9jrfE.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
 
 <p align="center">
 The powershell user creation script to create 1k+ accounts:  <br/>
-<img src="https://i.imgur.com/3Iu4Zxl.png" height="80%" width="80%" alt="AD Home Lab"/>
+<img src="https://i.imgur.com/wzeD7oU.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
 
 <p align="center">
 Automatic account creation in action:  <br/>
-<img src="https://i.imgur.com/mx1vgEg.png" height="80%" width="80%" alt="AD Home Lab"/>
+<img src="https://i.imgur.com/PLMNy8x.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
 
 <p align="center">
 1051 total users after running script:  <br/>
-<img src="https://i.imgur.com/EEnG1lY.png" height="80%" width="80%" alt="AD Home Lab"/>
+<img src="https://i.imgur.com/jEC9dtO.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
 
 <p align="center">
 CLIENT1 created, joined to mydomain.com and automatically receiving IP address, subnet mask, default gateway, etc:  <br/>
-<img src="https://i.imgur.com/Z2vv8XD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/uwAzTd3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 <p align="center">
 CLIENT1 showing on the domain controller as a result of being joined to mydomain.com:  <br/>
-<img src="https://i.imgur.com/vWUjycp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/W93VU7w.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 <p align="center">
 CSwisher, the random user account I chose to login to CLIENT1 with and test DHCP:  <br/>
-<img src="https://i.imgur.com/mgBGoaB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ULPBkFa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 <p align="center">
 CSwisher logging in on CLIENT1:  <br/>
-<img src="https://i.imgur.com/VNAKCyn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/lmi0yr5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 <p align="center">
 CSwisher logged in on CLIENT1, command line shows CSwisher as a member of mydomain.com:  <br/>
-<img src="https://i.imgur.com/LOW6r7N.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/WvLOmk0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 <p align="center">
 Back on the domain controller with DHCP showing an IP address leased to CLIENT1 following CSwisher's login:  <br/>
-<img src="https://i.imgur.com/gYZ5x9r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/4Zq8cfK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 <p align="center">
 Active Directory control panel featuring the addition of the various security groups:  <br/>
-<img src="https://i.imgur.com/qMdBUtn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/dkKYubG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <!--
