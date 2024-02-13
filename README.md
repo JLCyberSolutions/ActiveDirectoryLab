@@ -25,54 +25,80 @@ Pictured below is a basic diagram of the full, configured network. The first VM,
 <img src="https://i.imgur.com/1zUO3Ox.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
+
+<p align="center">
 Viewing the dashboard of AD server manager and all configured services on the domain controller:  <br/>
 <img src="https://i.imgur.com/EeKJchH.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
+
+<p align="center">
 DHCP enabled but still needs configuring: <br/>
 <img src="https://i.imgur.com/ZrgtsjY.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
+
+<p align="center">
 DHCP configured with scope 172.16.0.100-200:  <br/>
 <img src="https://i.imgur.com/rUEgAen.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
+
+<p align="center">
 The powershell user creation script to create 1k+ accounts:  <br/>
 <img src="https://i.imgur.com/3Iu4Zxl.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
+
+<p align="center">
 Automatic account creation in action:  <br/>
 <img src="https://i.imgur.com/mx1vgEg.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
+
+<p align="center">
 1051 total users after running script:  <br/>
 <img src="https://i.imgur.com/EEnG1lY.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
+
+<p align="center">
 CLIENT1 created, joined to mydomain.com and automatically receiving IP address, subnet mask, default gateway, etc:  <br/>
 <img src="https://i.imgur.com/Z2vv8XD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+
+<p align="center">
 CLIENT1 showing on the domain controller as a result of being joined to mydomain.com:  <br/>
 <img src="https://i.imgur.com/vWUjycp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+
+<p align="center">
 CSwisher, the random user account I chose to login to CLIENT1 with and test DHCP:  <br/>
 <img src="https://i.imgur.com/mgBGoaB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+
+<p align="center">
 CSwisher logging in on CLIENT1:  <br/>
 <img src="https://i.imgur.com/VNAKCyn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+
+<p align="center">
 CSwisher logged in on CLIENT1, command line shows CSwisher as a member of mydomain.com:  <br/>
 <img src="https://i.imgur.com/LOW6r7N.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+
+<p align="center">
 Back on the domain controller with DHCP showing an IP address leased to CLIENT1 following CSwisher's login:  <br/>
 <img src="https://i.imgur.com/gYZ5x9r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+
+<p align="center">
 Active Directory control panel featuring the addition of the various security groups:  <br/>
 <img src="https://i.imgur.com/qMdBUtn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
