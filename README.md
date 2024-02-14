@@ -12,16 +12,19 @@ The purpose of this project is to create a home lab version of an Active Directo
 - <b>Windows 10</b>
 - <b>Windows Server 2019</b> 
 
-<h2>AD Services Enabled (delete?) </h2>
+<h2>Key Points Within Project: </h2>
 
-- <b>Routing via RAS</b>
-- <b>NAT</b>
-- <b>DHCP</b>
+- <b>Installation of Active Directory and creation of mydomain.com</b>
+- <b>Routing enabled via configuration of RAS and NAT</b>
+- <b>Configuration of DHCP for automatic IP addressing</b>
+- <b>Powershell script for automatic user account creation</b>
+- <b>Creation of user workstation (CLIENT1) and joining of CLIENT1 to mydomain.com</b>
+- <b>Creation of various Security Groups for network division into specific departments</b>
 
 <h2>Project walk-through:</h2>
 
 <p align="center">
-Pictured below is a basic diagram of the full, configured network. The first VM, the domain controller (denoted DC) houses Active Directory and our domain (mydomain.com) via the installation of a Windows Server 2019 iso. This VM is configured to have two network adapters; one external adapter that connects to the internet, and one internal adapter that clients from inside the private network will connect to. The external network automatically receives IP addressing from my home router, while the internal network has IP addressing manually assigned to it. NAT and routing are configured on the domain controller allowing clients from the internal network to reach the internet through the domain controller. DHCP is configured with the info listed below so that our client machine (denoted CLIENT1, and using Windows 10) can automatically receive an IP address. CLIENT1 is joined to mydomain.com allowing any respective members to login and use this machine with their respective credentials. <br/>
+Pictured below is a basic diagram of the full, configured network. The first VM, the domain controller (denoted DC) houses Active Directory and our domain (mydomain.com) via the installation of a Windows Server 2019 iso. This VM is configured to have two network adapters; one external adapter that connects to the internet, and one internal adapter that clients from inside the private network will connect to. The external NIC automatically receives IP addressing from my home router, while the internal NIC has IP addressing manually assigned to it. NAT and routing are configured on the domain controller allowing clients from the internal portion of the network a means to reach the internet through the domain controller. DHCP is configured with the info listed below so that our client machine (denoted CLIENT1, and using Windows 10) can automatically receive an IP address. CLIENT1 is joined to mydomain.com allowing any respective members to login and use this machine with their respective credentials. <br/>
 <img src="https://i.imgur.com/2BNq92C.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
@@ -45,7 +48,7 @@ DHCP configured with scope 172.16.0.100-200:  <br/>
 <br />
 
 <p align="center">
-The powershell user creation script to create 1k+ accounts:  <br/>
+The powershell user creation script used to create 1k+ accounts:  <br/>
 <img src="https://i.imgur.com/wzeD7oU.png" height="80%" width="80%" alt="AD Home Lab"/>
 <br />
 <br />
