@@ -102,7 +102,7 @@ Back on the domain controller with DHCP showing an IP address leased to CLIENT1 
 <br />
 
 <p align="center">
-Active Directory control panel featuring the addition of the various security groups:  <br/>
+Active Directory control pane featuring the addition of the various security groups:  <br/>
 <img src="https://i.imgur.com/dkKYubG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
